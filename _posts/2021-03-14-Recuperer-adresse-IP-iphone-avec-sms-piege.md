@@ -4,9 +4,9 @@ layout: post
 title: "Récupérer l'adresse IP d'un iPhone en envoyant un SMS piégé"
 description: "Cet article décrit comment récupérer l'adresse IP d'un iPhone en envoyant un SMS piégé."
 lang: fr_FR
-category: iphone,ios,hack,adresseIP,SMS,phishing
+category: iphone,ios,hack,adresseIP,SMS
 ---
-![Récupérer IP iPhone avec SMS](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/illustration.jpg)
+![Récupérer IP iPhone avec SMS](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/illustration.jpg)
 
 # Récupérer l'adresse IP d'un iPhone en envoyant un SMS
 Cet article décrit comment faire **fuiter l'adresse IP externe d'un iPhone** (et donc le **géolocaliser** plus ou moins précisément) en envoyant un **SMS piégé**.
@@ -17,17 +17,17 @@ Certains services comme [IPLogger](https://iplogger.org) permettent de sauvegard
 ## Exploitation
 Un attaquant qui est enregistré dans la liste de contact peut forger une page piégée et l'envoyer à sa victime. La page piégé redirigera vers [cette image de chat](https://www.zooplus.fr/magazine/wp-content/uploads/2019/06/comprendre-le-langage-des-chats.jpg).
 
-[![Image piégée](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/no_previsualisation.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/no_previsualisation.PNG)
+[![Image piégée](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/no_previsualisation.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/no_previsualisation.PNG)
 
 Note : Le site iplogger.org pourrait être changé en utilisant un site choisi pour créer un scénario de phishing pour encourager l'utilisateur à cliquer sur le lien de prévisualisation. Par exemple, un attaquant pourrait utiliser `message-apple.org`.
 
 Si la victime clique sur `Toucher pour charger l'aperçu`, le contenu est chargé **sans avoir à visiter la page** :
 
-[![Prévisualisation sans cliquer](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/previsualisation.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/previsualisation.PNG)
+[![Prévisualisation sans cliquer](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/previsualisation.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/previsualisation.PNG)
 
 Du côté de l'attaquant, **l'adresse IP externe de la victime** est visible :
 
-[![Adresse IP de la victime](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/IP.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/IP.PNG)
+[![Adresse IP de la victime](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/IP.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/IP.PNG)
 
 L'attaquant peut alors voir l'adresse IP de la victime, son fournisseur d'accès internet, localiser approximativement ou précisément selon les outils en possession de l'attaquant...
 Dans le cas présent, l'agent utilisé est `bot` ce qui prouve que l'utilisateur n'a pas cliqué sur le lien. Autrement, l'agent serait `Safari`.
@@ -41,7 +41,7 @@ Autre point (qui m'a convaincu de le signaler à Apple) est que cette petite ast
 ## Impact CVSS
 Si je devais définir un imact CVSS, je l'aurais classé comme suit :
 
-[![Impact CVSS](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/CVSS.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/CVSS.PNG)
+[![Impact CVSS](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/CVSS.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/CVSS.PNG)
 
 ## Comment empêcher la fuite d'adresse IP de l'iPhone
 La requête de prévisualisation devrait être envoyée par les serveurs d'Apple pour préserver l'anonymat de l'utilisateur.
@@ -49,4 +49,4 @@ La requête de prévisualisation devrait être envoyée par les serveurs d'Apple
 ## Quels sont les version d'iOS affectées
 Le test a été effectué sur un iPhone 7 en version 14.4.
 
-[![Version d'iOS affectée](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/details.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/details.PNG)
+[![Version d'iOS affectée](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/details.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/details.PNG)
