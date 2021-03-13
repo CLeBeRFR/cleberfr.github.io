@@ -12,13 +12,13 @@ category: iphone,ios,hack,adresseIP,SMS
 Cet article décrit comment faire **fuiter l'adresse IP externe d'un iPhone** (et donc le **géolocaliser** plus ou moins précisément) en envoyant un **SMS piégé**.
 L'application iMessage native d'iOS offre une fonctionnalité de prévisualisation du **contenu des liens** lorsqu'un contact est enregistré dans l'application Contacts.
 La prévisualisation affiche le titre de la page, l'image et une description courte.
-Certains services comme https://iplogger.org permettent de sauvegarder l'adresse IP d'un utilisateur qui clique sur un lien. L'utilisateur piégé se retrouve alors redirigé vers la page d'origine sans même se rendre compte qu'il est passé par une page piégée.
+Certains services comme [IPLogger](https://iplogger.org) permettent de sauvegarder l'adresse IP d'un utilisateur qui clique sur un lien. L'utilisateur piégé se retrouve alors redirigé vers la page d'origine sans même se rendre compte qu'il est passé par une page piégée.
 
 ## Exploitation
-Un attaquant qui est enregistré dans la liste de contact peut forger une page piégée et l'envoyer à sa victime. La page piégé redirigera vers cette image de chat :
-https://www.zooplus.fr/magazine/wp-content/uploads/2019/06/comprendre-le-langage-des-chats.jpg
+Un attaquant qui est enregistré dans la liste de contact peut forger une page piégée et l'envoyer à sa victime. La page piégé redirigera vers [cette image de chat](https://www.zooplus.fr/magazine/wp-content/uploads/2019/06/comprendre-le-langage-des-chats.jpg).
 
 ![Image piégée](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/no_previsualisation.PNG)
+
 Note : Le site iplogger.org pourrait être changé en utilisant un site choisi pour créer un scénario de phishing pour encourager l'utilisateur à cliquer sur le lien de prévisualisation. Par exemple, un attaquant pourrait utiliser `message-apple.org`.
 
 Si la victime clique sur `Toucher pour charger l'aperçu`, le contenu est chargé **sans avoir à visiter la page** :
