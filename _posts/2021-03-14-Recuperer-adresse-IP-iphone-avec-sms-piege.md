@@ -6,7 +6,7 @@ description: "Cet article décrit comment récupérer l'adresse IP d'un iPhone e
 lang: fr_FR
 category: iphone,ios,hack,adresseIP,SMS
 ---
-![Récupérer IP iPhone avec SMS](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/illustration.jpg)
+![Récupérer IP iPhone avec SMS piégé](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms/illustration.jpg)
 
 # Récupérer l'adresse IP d'un iPhone en envoyant un SMS
 Cet article décrit comment faire **fuiter l'adresse IP externe d'un iPhone** (et donc le **géolocaliser** plus ou moins précisément) en envoyant un **SMS piégé**.
