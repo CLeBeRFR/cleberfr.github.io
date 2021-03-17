@@ -53,6 +53,7 @@ Le fichier manifest doit aussi être modifié via les paramètres du projet afin
 
 Le taux de détection de l'injecteur est le suivant :
 
+[![Taux de détection de l'injecteur (dropper)](/assets/images/2021-03-18-Evasion-Windows-Defender-injecteur-dropper/scan_dropper.PNG)](/assets/images/2021-03-18-Evasion-Windows-Defender-injecteur-dropper/scan_dropper.PNG)
 
 La non détection de l'injecteur par Windows Defender est le seul élément qui est vraiment intéressant car l'injecteur sert uniquement à évader ce dernier.
 
