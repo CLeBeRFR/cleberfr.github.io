@@ -21,9 +21,7 @@ Cet article détaillera les méthodes et les outils nécessaires afin de tenter 
 À l'heure où j'écris cet article, **il n'existe pas de vulnérabilité qui permette de casser le chiffrement d'une connexion wifi sécurisée par WPA/WPA2**. De ce fait, la seule attaque viable est une attaque par force brute (bruteforce).
 Pour se faire, l'attaquant doit récupérer la séquence d'initialisation de connexion (Handshake). Cette interception se fait lorsqu'un client se connecte au routeur cible ou point d'accès cible. Afin d'accélérer ce processus, l'attaquant peut lancer un paquet de désauthentification pour forcer le client à se déconnecter et ainsi réinitialiser une connexion.
 
-Pour faire une telle attaque, une carte capable d'injecter des paquets et donc capable de passer en mode moniteur sera nécessaire. Le mode moniteur est un mode d'écoute, l'objectif est d'intercepter les paquets. Vous pourrez vous procurer la référence en la matière : **ALFA Network AWUS036NHA** [disponible ici pour 24€](https://amzn.to/33ozgAE).
-
-<center><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=cleber-21&marketplace=amazon&region=FR&placement=B004Y6MIXS&asins=B004Y6MIXS&linkId=71d2adba6077fcee70fe8cf8bfdf3356&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff"></iframe></center>
+Pour faire une telle attaque, une carte capable d'injecter des paquets et donc capable de passer en mode moniteur sera nécessaire. Le mode moniteur est un mode d'écoute, l'objectif est d'intercepter les paquets. Vous pourrez vous procurer la référence en la matière en achetant une carte **ALFA Network AWUS036NHA** qui coûte aux alentours de 24€.
 
 ### 1.1 - Passage en mode moniteur de la carte réseau
 Il faut s'assurer qu'elle soit bien connectée, elle devrait s'appeler `wlan0` :
@@ -189,10 +187,6 @@ Selon [Wikipédia](https://fr.wikipedia.org/wiki/Wired_Equivalent_Privacy) :
 
 Voici comment **exploiter la vulnérabilité liée au protocole WEP pour pirater ce réseau sécurisé**.
 ### 2.1 - Passage en mode moniteur de la carte réseau
-Pour faire une telle attaque, une carte capable d'injecter des paquets et donc capable de passer en mode moniteur sera nécessaire. Le mode moniteur est un mode d'écoute, l'objectif est d'intercepter les paquets. Vous pourrez vous procurer la référence en la matière : **ALFA Network AWUS036NHA** [disponible ici pour 24€](https://amzn.to/33ozgAE).
-
-<center><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=cleber-21&marketplace=amazon&region=FR&placement=B004Y6MIXS&asins=B004Y6MIXS&linkId=71d2adba6077fcee70fe8cf8bfdf3356&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff"></iframe></center>
-
 Il faut s'assurer que la carte soit bien connectée, elle devrait s'appeler `wlan0` :
 ```shell
 /sbin/ifconfig
@@ -384,8 +378,3 @@ Pour cet article, je n'ai pas pris le temps de personnaliser la page, il est év
 ### 4.1 - Comment protéger se protéger d'une attaque Evil Twin
 Malheureusement, il n'y a pas vraiment de solutions. Utiliser un VPN ne servirait à rien car ce dernier n'encapsulerait pas le paquet de désauthentification. Il faut garder en tête que ne pas se connecter au wifi ouvert.
 Désactiver sa borne wifi et utiliser un câble Ethernet peut être une bonne solution...pour la sécurité et pour la santé :)
-
-## 5 - Où se procurer le matériel pour pirater un wifi et ainsi acquérir sa propre carte ALFA Network AWUS036NHA
-Vous pouvez vous procurer votre propre [carte **ALFA Network AWUS036NHA** directement sur Amazon via ce lien](https://amzn.to/33ozgAE). Ces attaques sont très simples à mettre en oeuvre et permettent d'**évaluer la sécurité de son propre réseau wifi**.
-
-<center><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=FR&source=ac&ref=qf_sp_asin_til&ad_type=product_link&tracking_id=cleber-21&marketplace=amazon&region=FR&placement=B004Y6MIXS&asins=B004Y6MIXS&linkId=71d2adba6077fcee70fe8cf8bfdf3356&show_border=true&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff"></iframe></center>
