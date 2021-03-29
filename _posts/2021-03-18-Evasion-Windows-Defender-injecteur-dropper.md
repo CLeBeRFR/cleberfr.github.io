@@ -8,7 +8,6 @@ category: redteam,malware,raccourci,dropper,injecteur,evasion
 ---
 ![Evasion de Windows Defender grâce à un injecteur (dropper)](/assets/images/2021-03-18-Evasion-Windows-Defender-injecteur-dropper/illustration.PNG)
 
-# Evasion de Windows Defender grâce à un injecteur (dropper)
 Un injecteur (ou *dropper*, en anglais), est un programme créé pour installer un logiciel malveillant sur un système cible.
 Il s'agit d'une forme minimaliste de cheval de Troie. Le code du logiciel malveillant est soit inclus à même l'injecteur, soit téléchargé sur la machine à partir d'Internet une fois activé.
 

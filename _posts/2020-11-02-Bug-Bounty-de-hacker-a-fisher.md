@@ -6,9 +6,8 @@ description: "Cet article décrit comment une injection de caractères permet de
 lang: fr_FR
 category: Bug Bounty, injection, phishing
 ---
-
 ![Bug Bounty : De hacker à phisher](/assets/images/2020-11-02-Bug-Bounty-de-hacker-a-fisher/illustration.jpg)
-# Bug Bounty : De hacker à phisher
+
 Dans ce court article, j'expliquerai comment j'ai pu exploiter une vulnérabilité de l'API d'un grand site français pour en faire un scénario de phishing. Je précise bien évidemment que tout a été fait dans la légalité car le site en question est inscrit sur une plateforme de Bug Bounty et j'ai été invité à ce Bug Bounty privé.
 
 ## Injection de caractères spéciaux via l'interface

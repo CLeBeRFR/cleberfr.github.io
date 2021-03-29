@@ -6,10 +6,8 @@ description: "Cet article décrit comment lors d'une opération de RedTeam ou AP
 lang: fr_FR
 category: OSINT,geolocalisation,powershell
 ---
-
 ![Géolocaliser un PC grâce à PowerShell](/assets/images/2020-11-18-Geolocaliser-un-pc-grace-a-powershell/illustration.jpg)
 
-# Géolocaliser un PC grâce à PowerShell
 Lorsqu'un PC est compromis, il peut-être intéressant de connaître sa géolocalisation. Géolocaliser un équipement peut également être utile pour des challenges OSINT.
 
 Enfin, la géolocalisation peut permettre de retrouver son PC volé. Cependant, dans ce cas il est préférable de suivre les [recommandations de Microsoft](https://support.microsoft.com/fr-fr/account-billing/localiser-et-verrouiller-un-appareil-windows-perdu-890bf25e-b8ba-d3fe-8253-e98a12f26316) qui prévoient des fonctions natives et d'alerter les autorités compétentes.

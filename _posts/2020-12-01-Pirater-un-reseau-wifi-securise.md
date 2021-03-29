@@ -6,10 +6,8 @@ description: "Cet article décrit comment pirater un réseau wifi qui est sécur
 lang: fr_FR
 category: phishing,wifi,hack,cracking,bruteforce
 ---
-
 ![Pirater un réseau wifi sécurisé](/assets/images/2020-12-01-Pirater-un-reseau-wifi-securise/illustration.jpg)
 
-# Pirater un réseau wifi sécurisé
 Cet article détaillera les méthodes et les outils nécessaires afin de tenter de **compromettre la sécurité d'un réseau wifi**. Quatre types d'attaques seront détaillées :
 1. Pirater un réseau wifi sécurisé par une clé WPA/WPA2 via une attaque par force brute (bruteforce)
 2. Pirater un réseau wifi sécurisé par une clé WEP en exploitant la vulnérabulité liée au protocole

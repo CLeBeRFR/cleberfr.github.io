@@ -6,9 +6,7 @@ description: "Cet article décrit comment créer une infrastructure pour une op�
 lang: fr_FR
 category: Phishing, Social Engineering, Mail
 ---
-
 ![Créer une infrastructure de phishing gratuitement avec Amazon Web Service et Gophish](/assets/images/2020-10-06-Crer-une-infrastructure-de-phishing/illustration.jpg)
-# Créer une infrastructure de phishing gratuitement avec Amazon Web Service et Gophish
 
 Il est très simple de déployer une infrastructure de phishing grâce aux services d’Amazon Web Service ainsi qu’au framework [Gophish](https://getgophish.com/). Ce framework opensource est dédié à la création de campagnes de phishing et permet un suivi très précis.
 La création d'une campagne de phishing se décline en 3 étapes :

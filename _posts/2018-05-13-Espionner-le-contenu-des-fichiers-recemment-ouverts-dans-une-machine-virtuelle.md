@@ -7,7 +7,7 @@ lang: fr_FR
 category: Machine Virtuelle
 ---
 ![Flux de données : illustration](/assets/images/2018-05-13-Espionner-le-contenu-des-fichiers-recemment-ouverts-dans-une-machine-virtuelle/illustration.jpg)
-# Espionner le contenu des fichiers récemment ouverts dans une machine virtuelle
+
 Bonjour,
 dans cet article j’aimerais partager avec vous une récente découverte que j’ai fait sur la fonctionnalité sauvegarder l’état, rien de bien transcendant mais ça peut être problématique selon certain cas.
 

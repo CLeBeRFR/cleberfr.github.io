@@ -7,7 +7,6 @@ lang: fr_FR
 category: Malware
 ---
 
-# Créer son propre environnement d’analyse multi-antivirus
 Dans cet article je vais vous expliquer comment mettre en place votre propre système d’analyse multi-antivirus à l’instar de VirusTotal, MetaDefender ou encore Jotti. J’ai décidé de faire mon propre système car je ne souhaite pas partager avec le site internet ou les éditeurs d’antivirus les fichiers que j’analyse.
 
 Le projet [Malice](https://github.com/maliceio/malice/) va grandement nous faciliter la tâche puisque ce projet à pour vocation de mettre à disposition sous forme d’image Docker plusieurs antivirus.

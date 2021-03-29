@@ -6,9 +6,8 @@ description: "Cet article présente les principales requêtes Google Dorks pour 
 lang: fr_FR
 category: Google Dorks
 ---
-
 ![Google Dorks](/assets/images/2019-10-29-Reveler-des-informations-sensibles-grace-aux-Google-Dorks/illustration.jpg)
-# Révéler des informations sensibles grâce aux Google Dorks
+
 J’aimerais parler des Google Dorks. Rien qui ne soit pas déjà connu, mais j’en avais vaguement parlé sur l’article du [Spying Challenge](https://clement-bouder.fr/blog/ctf/2019/07/13/Spying-Challenge-leHack-se-prendre-pour-james-bond-le-temps-dun-challenge.html).
 
 De quoi parle t-on quand on emploie le terme Google Dorks, selon [Wikipédia](https://fr.wikipedia.org/wiki/Google_hacking) :

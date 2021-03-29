@@ -6,9 +6,8 @@ description: "Cet article présente le challenge Spying Challenge qui s'est dér
 lang: fr_FR
 category: CTF
 ---
-
 ![Spying Challenge 2019](/assets/images/2019-07-13-Spying-Challenge-leHack-se-prendre-pour-james-bond-le-temps-dun-challenge/illustration.png)
-# Spying Challenge à leHack 2019 : Se prendre pour James Bond le temps d’un challenge
+
 J’ai eu la chance de participer à l’évènement [leHack 2019](https://lehack.org/fr), nouveau nom de La Nuit du Hack. Nous nous sommes lancés avec mon association [Hack In Provence](https://www.hackinprovence.fr/) dans le [Spying Challenge 2019](https://spyingchallenge.com/). Cette compétition a pour but de mettre à l’épreuve vos talents en matière d'**OSINT (renseignement d'origine sources ouvertes)**, **hack**, **tracking**, **social engineering**, **Lockpicking** (crochetage de serrure) et **intrusion physique**. Une panoplie de compétences passionnantes à développer histoire de se prendre pour James Bond le temps du challenge.
 
 Le challenge était divisé en 2 phases, la première phase consistait à rechercher des renseignements sur l’entreprise nommée [Lictor](https://lictor.fr/) (entreprise fictive créée pour le challenge). Le but de l’enquête était de connaître absolument tout de cette organisation (ses activités, la vie de ses employés, leur mobilité géographique, etc.) afin de déjouer un potentiel coup d’état. Nous devions également enquêter sur un certain Gustave Leproleau qui selon les sources entretenait des relations avec l’entreprise en question.
