@@ -9,11 +9,11 @@ category: redteam,malware,active directory,gpo
 ![Compromission d'un poste de l'Active Directory via une GPO](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/illustration.PNG)
 
 L'objectif principal d'Active Directory est de fournir des services centralisés d'identification et d'authentification à un réseau d'ordinateurs utilisant le système Windows, macOS ou encore Linux. Il permet également l'attribution et **l'application de stratégies de groupes** ainsi que **l'installation de mises à jour critiques** par les administrateurs.
-L'Active Directory est donc le nerd de la guerre du pentester Red Team. En cas de compromissions de ce dernier, la partie est gagnée. L'attaquant peut alors rebondir sur les différents postes du domaine compromis.
+L'Active Directory est donc le nerf de la guerre du pentester Red Team. En cas de compromissions de ce dernier, la partie est gagnée. L'attaquant peut alors rebondir sur les différents postes du domaine compromis.
 
 ## Exploitation de l'Active Directory pour installer un malware via un GPO
-Dans cet article, je pars du postulat que **l'Active Directory est déjà compromis** et je m'intéresse donc à l'utilisation des stratgéies de groupe.
-L'idée est ici de déployer un malware sur tous les systèmes de l'Active Directory (ou un seul pour cibler un utilisateur en particulier). Bon mon lab est assez petit car il ne se compose que d'un **Windows Server 2019 (Contrôleur de domaine)** et d'un **Windows 10** tous deux dans le domaine **mondomaine.local**.
+Dans cet article, je pars du postulat que **l'Active Directory est déjà compromis** et je m'intéresse donc à l'utilisation des stratégies de groupe.
+L'idée est ici de déployer un malware sur tous les systèmes de l'Active Directory (ou un seul pour cibler un utilisateur en particulier). Bon mon lab est assez petit, car il ne se compose que d'un **Windows Server 2019 (Contrôleur de domaine)** et d'un **Windows 10** tous deux dans le domaine **mondomaine.local**.
 
 ### Création de la GPO malveillante
 La première étape est de créer la GPO malveillante que je nommerai...*Installation Malware* qui est effective sur le domaine *mondomaine.local* et s'applique à **tous les utilisateurs authentifiés** :
@@ -23,7 +23,7 @@ La première étape est de créer la GPO malveillante que je nommerai...*Install
 ### Exclusion de la détection du malware
 Une des politiques de sécurité appliquée sera d'exclure la détection des fichiers ayant pour extension *.exe*.
 
-Il faut donc dans la partie *Compostants Windows* -> *Antivirus Windows Defender* -> *Exclusions* -> *Exclusion d'extensions*, créer une règle d'exclusion sur le *.exe*.
+Il faut donc dans la partie *Composants Windows* -> *Antivirus Windows Defender* -> *Exclusions* -> *Exclusion d'extensions*, créer une règle d'exclusion sur le *.exe*.
 
 [![Exclusion de la détection des fichiers .exe](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/creation_exclusion.PNG)](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/creation_exclusion.PNG)
 
@@ -49,7 +49,7 @@ La GPO qui exécutera le script au démarrage de l'ordinateur doit maintenant ê
 
 [![Création de la GPO qui exécute le script de téléchargement du malware](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/creation_gpo_execution_malware.PNG)](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/creation_gpo_execution_malware.PNG)
 
-Une fois le rédarrage de l'ordinateur, le script est alors exécuté qui lui même téléchargera le logiciel malveillant et l'exécutera. Du côté de l'attaquant, la victime est alors visible :
+Une fois le redémarrage de l'ordinateur, le script est alors exécuté qui lui même téléchargera le logiciel malveillant et l'exécutera. Du côté de l'attaquant, la victime est alors visible :
 
 [![Liste des PC compromis](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/liste_pc_compromis.PNG)](/assets/images/2021-03-19-Une-GPO-pour-les-gouverner-tous/liste_pc_compromis.PNG)
 
