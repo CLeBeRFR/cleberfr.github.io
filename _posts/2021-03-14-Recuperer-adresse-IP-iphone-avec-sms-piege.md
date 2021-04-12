@@ -42,6 +42,10 @@ Si je devais définir un imact CVSS, je l'aurais classé comme suit :
 
 [![Impact CVSS](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/CVSS.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/CVSS.PNG)
 
+Cependant, il faut bien garder à l'esprit qu'après échanges avec le département sécurité de Apple, comme je m'y attendais, leur réponse à été que l'application fonctionne comme il se doit (et il sont raison) :
+[![Email de Apple](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/email.PNG)](/assets/images/2021-03-14-Recuperer-adresse-IP-iphone-avec-sms-piege/email.PNG)
+
+
 ## Comment empêcher la fuite d'adresse IP de l'iPhone
 La requête de prévisualisation devrait être envoyée par les serveurs d'Apple pour préserver l'anonymat de l'utilisateur.
 
