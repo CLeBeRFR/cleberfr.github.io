@@ -20,7 +20,7 @@
 
 title: Blog de Clément BOUDER, passionné de cybersécurité
 description: >- # this means to ignore newlines until "baseurl:"
-  Je pentester et passionné par la sécurité informatique, hacking, cybersécurité, cyberdéfense, les opérations "Red Team" et "Advanced Persistent Threat".
+  Je suis pentester et passionné par la sécurité informatique, hacking, cybersécurité, cyberdéfense, les opérations "Red Team" et "Advanced Persistent Threat".
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://clement-bouder.fr" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:title/
