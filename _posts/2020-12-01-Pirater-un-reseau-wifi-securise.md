@@ -20,6 +20,7 @@ Cet article détaillera les méthodes et les outils nécessaires afin de tenter 
 Pour se faire, l'attaquant doit récupérer la séquence d'initialisation de connexion (Handshake). Cette interception se fait lorsqu'un client se connecte au routeur cible ou point d'accès cible. Afin d'accélérer ce processus, l'attaquant peut lancer un paquet de désauthentification pour forcer le client à se déconnecter et ainsi réinitialiser une connexion.
 
 Pour faire une telle attaque, une carte capable d'injecter des paquets et donc capable de passer en mode moniteur sera nécessaire. Le mode moniteur est un mode d'écoute, l'objectif est d'intercepter les paquets. Vous pourrez vous procurer la référence en la matière en achetant une carte **ALFA Network AWUS036NHA** qui coûte aux alentours de 24€.
+
 *Note : Si vous utilisez votre carte Alfa sur une machine virtuelle, vous devez la voir apparaître dans `Périphérique` --> `USB`. Si aucun périphérique n'apparaît, il faut s'assurer que l'utilisateur de l'hôte soit bien dans le groupe `vboxusers`, auquel cas il faut l'ajouter via : `sudo usermod -a -G vboxusers VotreUtilisateur` (si vous êtes sous Linux) puis rédémarrer le PC.
 Par ailleurs, la VM doit être configurée en mode USB 3.0.*
 
