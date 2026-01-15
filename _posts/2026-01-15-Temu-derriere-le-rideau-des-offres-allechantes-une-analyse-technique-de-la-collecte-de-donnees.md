@@ -10,7 +10,7 @@ category: temu,malware,cybersecurité,données personnelles
 
 Dans l'écosystème mobile actuel, les applications de commerce électronique promettent commodité et économies. Cependant, une vigilance accrue est de mise, particulièrement lorsqu'il s'agit d'applications populaires comme **Temu**. Une analyse technique approfondie, menée par [NTC (National Cyber Security Centre)](https://www.ntc.swiss/hubfs/temu-security-analysis-ntc-en.pdf), révèle des pratiques de collecte et de transmission de données qui méritent une attention particulière de la part des professionnels de la cybersécurité et des pentester. Cet article se propose de décortiquer les mécanismes techniques impliqués, en mettant l'accent sur les implications en matière de sécurité et de vie privée.
 
-## Un Aperçu Technique des Mécanismes de Collecte
+## Interpruteur JavaScript propriétaire
 
 L'analyse met en lumière plusieurs mécanismes par lesquels Temu collecte des informations potentiellement sensibles. L'un des aspects les plus préoccupants est l'utilisation d'un **interpruteur JavaScript propriétaire** pour la création de classes Java.
 
@@ -121,7 +121,7 @@ Et les requêtes déclarées dans `AndroidManifest.xml` pour Android :
 
 Ces éléments suggèrent une volonté de cartographier l'écosystème applicatif de l'utilisateur, potentiellement pour des analyses comportementales, du profilage, ou même pour identifier des vecteurs d'attaque ou de monétisation via des partenariats avec d'autres services.
 
-## Données Chiffrées et Configuration
+## Données Chiffrées
 Le chiffrement des données de configuration, bien que courant pour protéger des informations sensibles, rend l'analyse plus difficile :
 > "Encrypting the configuration file makes it more difficult to analyse."
 
@@ -129,9 +129,10 @@ Des preuves d'utilisation d'un chiffrement AES avec des clés hardcodées pour c
 ```
 https://gchq.github.io/CyberChef/#recipe=AES_Decrypt(%7B'option':'Hex','string':'42132b322f063b161d4a7303745a596e'%7D,%7B'option':'Hex','string':'22505c58440b433c09520446547b7e12'%7D,'CBC','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)
 ```
+
 L'impact exact de ces configurations chiffrées reste flou, mais il est supposé qu'elles contrôlent le contenu des WebViews.
 
-## Localisation Précise : Une Capacité de Requête Critique à Surveiller
+## Localisation Précise
 L'application Temu possède la **capacité technique de solliciter la localisation exacte du smartphone de l'utilisateur**. Cette fonctionnalité, bien que courante pour certaines applications, soulève des questions importantes lorsqu'elle est analysée sous l'angle de la protection des données personnelles et des risques de surveillance.
 
 Dans les systèmes d'exploitation modernes comme Android et iOS, la distinction entre la localisation approximative (`ACCESS_COARSE_LOCATION`) et la localisation précise (`ACCESS_FINE_LOCATION`) est fondamentale pour la granularité des autorisations et la protection de la vie privée. Tandis que la première offre une géolocalisation moins précise (souvent basée sur les données cellulaires ou le Wi-Fi), la seconde s'appuie sur le GPS, fournissant des coordonnées d'une précision au mètre près.
@@ -162,14 +163,14 @@ Une autre constatation technique pertinente concerne la manière dont Temu gère
 Ce mécanisme pourrait permettre de contourner les bloqueurs de publicité qui se basent sur les requêtes DNS.
 Par ailleurs, les métadonnées des requêtes constituent une source d'information complémentaire pour cerner l'activité de l'utilisateur, y compris ses schémas d'horaires.
 
-## Authentification et Vulnérabilités
+## Absence de MFA
 L'application propose une authentification multifacteur (MFA) optionnelle :
 > "Multi-factor authentication is not enforced"
 > "When registering an account, Temu only requires an e-mail address and a password or a telephone number. Multi-factor authentication is optional."
 
 Le fait que la MFA soit optionnelle présente un risque accru pour les comptes utilisateurs, ouvrant la porte à des attaques de réutilisation de mot de passe (*credential reuse*), si des fuites de données pour l'utilisateur en question sont disponibles.
 
-## Recommandations pour les Professionnels
+## Conclusion
 Face à ces constats, l'analyse émet des recommandations claires :
 - Questionner l'utilisation de l'application Temu, particulièrement dans un contexte professionnel ou gouvernemental.
 - Mettre en place des mesures techniques et organisationnelles si l'utilisation est jugée indispensable. Cela inclut :
