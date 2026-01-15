@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: "Temu : Derrière le Rideau des Offres Alléchantes, une Analyse Technique de la Collecte de Données"
 description: "Cet article basé sur l'analyse technique de ntc.swiss décrit les différents mécanisme malveillants de Temu pour utiliser les données personnelles de ses utilisateurs."
@@ -40,14 +40,14 @@ public static void createCustomElement(o01.d dVar, LegoContext legoContext) {
 }
 ```
 
-Le code ci-dessus ouvre la porte à l'exécution de code arbitraire avec des privilèges élevés, rendant l'analyse statique plus ardue puisque le comportement peut varier dynamiquement.
+Le code ci-dessus ouvre la porte à l'exécution de code arbitraire, rendant l'analyse statique plus ardue puisque le comportement peut varier dynamiquement.
 
 ## Collecte de Données Système et Identification
 L'analyse révèle également des préoccupations quant à la collecte de données système :
 
 > "Read out and transmit system files. The Android app collects and transmits data on the CPU of the end device to a TEMU backend. While accessing CPU performance data may have legitimate purposes, such as optimizing the application's performance based on the user's device capabilities, obtaining the SoC serial number raises potential privacy concerns. This unique identifier could be used to track users who are not logged in, when an Advertising ID is unavailable, or as an alternative method of user identification."
 
-Des indices dans les bibliothèques natives suggèrent l'accès à des informations telles que le nombre de cœurs du CPU, la fréquence d'horloge et le numéro de série du SoC (System on Chip) :
+Des indices dans les bibliothèques natives suggèrent l'accès à des informations telles que le nombre de coeurs du CPU, la fréquence d'horloge et le numéro de série du SoC (System on Chip) :
 ```Java
 String cpuPaths[] = {
     "/proc/cpuinfo",
@@ -66,8 +66,6 @@ for (String path : cpuPaths) {
     }
 }
 ```
-
-> "Various strings in a programme library indicate access to CPU information. Figure 12 and Figure 13 show the paths that are queried by the app."
 
 La capacité d'identifier un appareil via son numéro de série SoC est particulièrement préoccupante, car elle peut servir de mécanisme de traçage persistant, contournant les mécanismes d'anonymisation comme l'ID publicitaire. Ces éléments contribuent à la création de profils utilisateurs détaillés et à une surveillance accrue des activités.
 
@@ -127,7 +125,7 @@ Ces éléments suggèrent une volonté de cartographier l'écosystème applicati
 Le chiffrement des données de configuration, bien que courant pour protéger des informations sensibles, rend l'analyse plus difficile :
 > "Encrypting the configuration file makes it more difficult to analyse."
 
-Des preuves d'utilisation d'un chiffrement AES avec des clés hardcodées pour certains paramètres suggèrent une tentative de dissimulation. Le déchiffrement met en évidence une approche potentiellement standardisée mais opaque :
+Des preuves d'utilisation d'un chiffrement AES avec des clés hardcodées pour certains paramètres suggèrent une tentative de dissimulation. Le déchiffrement met en évidence une approche potentiellement standardisée mais opaque. Le lien cyberchef suivant permet de déchiffrer tout code AES chiffré avec les clés hardcodées :
 ```
 https://gchq.github.io/CyberChef/#recipe=AES_Decrypt(%7B'option':'Hex','string':'42132b322f063b161d4a7303745a596e'%7D,%7B'option':'Hex','string':'22505c58440b433c09520446547b7e12'%7D,'CBC','Raw','Raw',%7B'option':'Hex','string':''%7D,%7B'option':'Hex','string':''%7D)
 ```
@@ -138,7 +136,7 @@ L'application Temu possède la **capacité technique de solliciter la localisati
 
 Dans les systèmes d'exploitation modernes comme Android et iOS, la distinction entre la localisation approximative (`ACCESS_COARSE_LOCATION`) et la localisation précise (`ACCESS_FINE_LOCATION`) est fondamentale pour la granularité des autorisations et la protection de la vie privée. Tandis que la première offre une géolocalisation moins précise (souvent basée sur les données cellulaires ou le Wi-Fi), la seconde s'appuie sur le GPS, fournissant des coordonnées d'une précision au mètre près.
 
-L'analyse des manifestes de l'application confirme la présence des permissions requises pour le suivi de localisation précise sur les deux plateformes principales :
+L'analyse des fichiers *Manifest* de l'application confirme la présence des permissions requises pour le suivi de localisation précise sur les deux plateformes principales :
 - Sur Android, le fichier `AndroidManifest.xml` déclare explicitement les permissions :
     ```xml
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
