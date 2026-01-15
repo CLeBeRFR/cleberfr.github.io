@@ -10,9 +10,9 @@ category: temu,malware,cybersecurité,données personnelles
 
 Dans l'écosystème mobile actuel, les applications de commerce électronique promettent commodité et économies. Cependant, une vigilance accrue est de mise, particulièrement lorsqu'il s'agit d'applications populaires comme **Temu**. Une analyse technique approfondie, menée par [NTC (National Cyber Security Centre)](https://www.ntc.swiss/hubfs/temu-security-analysis-ntc-en.pdf), révèle des pratiques de collecte et de transmission de données qui méritent une attention particulière de la part des professionnels de la cybersécurité et des pentester. Cet article se propose de décortiquer les mécanismes techniques impliqués, en mettant l'accent sur les implications en matière de sécurité et de vie privée.
 
-## Interpruteur JavaScript propriétaire
+## Interpréteur JavaScript propriétaire
 
-L'analyse met en lumière plusieurs mécanismes par lesquels Temu collecte des informations potentiellement sensibles. L'un des aspects les plus préoccupants est l'utilisation d'un **interpruteur JavaScript propriétaire** pour la création de classes Java.
+L'analyse met en lumière plusieurs mécanismes par lesquels Temu collecte des informations potentiellement sensibles. L'un des aspects les plus préoccupants est l'utilisation d'un **Interpréteur JavaScript propriétaire** pour la création de classes Java.
 
 > "Creation of Java classes through a proprietary JavaScript interpreter"
 > [...]
