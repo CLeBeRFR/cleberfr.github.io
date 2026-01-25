@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: "Espionner le contenu des fichiers récemment ouverts dans une machine virtuelle"
 description: "Cet article présente comment extraire des informations sensibles dans la mémoire RAM stockée d'une machine VirtualBox."

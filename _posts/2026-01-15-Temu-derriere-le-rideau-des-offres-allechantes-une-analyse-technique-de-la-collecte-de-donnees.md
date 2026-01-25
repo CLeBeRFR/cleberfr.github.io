@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: "Temu : Derrière le Rideau des Offres Alléchantes, une Analyse Technique de la Collecte de Données"
 description: "Cet article basé sur l'analyse technique de ntc.swiss décrit les différents mécanisme malveillants de Temu pour utiliser les données personnelles de ses utilisateurs."

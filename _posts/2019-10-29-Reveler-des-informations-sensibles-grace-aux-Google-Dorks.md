@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: "Révéler des informations sensibles grâce aux Google Dorks"
 description: "Cet article présente les principales requêtes Google Dorks pour trouver des documents confidentiels, usurpation d'identité, vulnérabilité web"
