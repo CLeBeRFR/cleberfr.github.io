@@ -131,23 +131,13 @@
 				}
 			}
 
-			&.use-middle {
-				&:after {
-					content: '';
-					display: block;
-					position: absolute;
-					top: 0;
-					left: calc(50% - #{_size(border-width) * 1});
-					width: _size(border-width);
-					height: 100%;
-					background: _palette(border);
-				}
+			// The "use-middle" behavior (centered seam) is disabled: with 4+ nav items of
+			// unequal widths it breaks the seam alignment, so all dividers are kept instead.
 
-				ul {
-					li {
-						&.is-middle {
-							border-left: 0;
-						}
+			ul {
+				li {
+					&.is-middle {
+						border-left: solid _size(border-width) _palette(border);
 					}
 				}
 			}
